@@ -115,7 +115,22 @@ main {
   align-items: center;
 }
 
+.sidebar .sidebar-list-details .tag-list {
+  display: none;
+  transition: var(--transition-config);
+}
 
+.sidebar.close .sidebar-list-details li:hover .tag-list {
+  display: block;
+  margin-left: 60px;
+  padding: 10px;
+  width: 120px;
+  position: absolute;
+  background: var(--hover--color);
+  border-radius: 4px;
+  height: 20px;
+  transform: translateY(-100%);
+}
 
 .sidebar-list-details>.drop-itens>a {
   justify-content: space-between;
