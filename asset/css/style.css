@@ -42,7 +42,7 @@ main {
   left: 0;
   background: var(--bg--primary--color);
   color: var(--default--color);
-  height: 100vh;
+  height: 100%;
   width: 240px;
   transition: var(--transition-config);
 }
@@ -116,13 +116,13 @@ main {
 }
 
 .sidebar .sidebar-list-details .tag-list {
-  display: none;
-  transition: var(--transition-config);
+  opacity: 0;
+  white-space: nowrap;
 }
 
 .sidebar.close .sidebar-list-details li:hover .tag-list {
-  display: block;
-  margin-left: 60px;
+  opacity: 1;
+  margin-left: 20px;
   padding: 10px;
   width: 120px;
   position: absolute;
@@ -130,6 +130,8 @@ main {
   border-radius: 4px;
   height: 20px;
   transform: translateY(-100%);
+  z-index: 10;
+  pointer-events: none;
 }
 
 .sidebar-list-details>.drop-itens>a {
